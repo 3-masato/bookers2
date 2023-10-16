@@ -1,0 +1,12 @@
+<% user = User.find(book.user_id) %>
+<tr>
+  <td data-col="avatar">
+    <%= link_to user_path(user.id) do %>
+      <%= image_tag user.get_profile_image(64, 64), width: 64, height: 64 %>
+    <% end %>
+  </td>
+  <td data-col="title">
+    <%= link_to book.title, book_path(book) %>
+  </td>
+  <td data-col="opinion"><%= book.body %></td>
+</tr>

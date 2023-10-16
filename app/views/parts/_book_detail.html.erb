@@ -1,0 +1,24 @@
+<section>
+  <% user = User.find(book.user_id) %>
+  <h2>Book detail</h2>
+
+  <div class="card">
+    <div class="card-body d-flex">
+      <div class="mr-3"><%= image_tag user.get_profile_image(48, 48), width: 48, height: 48 %></div>
+      <div class="w-100">
+        <div class="d-flex mb-1">
+          <div class=""><%= link_to user.name, user_path(user) %></div>
+          <div class="ml-auto">
+            <% if user == current_user %>
+              Edit | Delete
+            <% end %>
+          </div>
+        </div>
+        <div class="">
+          <div class="h3"><%= book.title %></div>
+          <p><%= book.body %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

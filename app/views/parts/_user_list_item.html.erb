@@ -1,0 +1,9 @@
+<tr>
+  <td data-col="avatar">
+    <%= link_to user_path(user.id) do %>
+      <%= image_tag user.get_profile_image(64, 64), width: 64, height: 64 %>
+    <% end %>
+  </td>
+  <td data-col="name"><%= user.name %></td>
+  <td data-col="show"><%= link_to "Show", user_path(user.id) %></td>
+</tr>
