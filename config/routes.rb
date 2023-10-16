@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'books/show'
+  get 'books/index'
+  get 'users/show'
+  get 'users/edit'
+  get 'users/index'
   devise_for :users
   root to: 'home#top'
   get "home/about", to: "home#about", as: "about"
