@@ -1,1 +1,23 @@
 @use '~bootstrap/scss/bootstrap';
+
+.message-box {
+  font-size: 0.94rem;
+  margin: 1em 0;
+  padding: 0.75em 1em;
+  border-radius: 2px;
+
+  --color-success: #052e16;
+  --bg-color-success: #bbf7d0;
+  --color-error: #450a0a;
+  --bg-color-error: #fecaca;
+
+  &.success {
+    color: var(--color-success);
+    background-color: var(--bg-color-success);
+  }
+
+  &.errors {
+    color: var(--color-error);
+    background-color: var(--bg-color-error);
+  }
+}
