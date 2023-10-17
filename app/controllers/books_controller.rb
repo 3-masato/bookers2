@@ -15,6 +15,13 @@ class BooksController < ApplicationController
       redirect_to book_path(@book.id)
     end
   end
+  
+  def update
+    
+  end
+  
+  def destroy
+  end
 
   private
 
