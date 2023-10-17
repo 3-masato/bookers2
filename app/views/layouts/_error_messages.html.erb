@@ -1,0 +1,13 @@
+<% if model && model.errors.any? %>
+  <div class="message-box errors">
+    <div class="font-weight-bold h5">
+      <i class="fa-solid fa-triangle-exclamation mr-2" style="font-size: 30px;"></i>
+      <%= model.errors.count %> errors prohibited this obj from being saved:
+    </div>
+    <ul class="ml-4">
+      <% model.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
