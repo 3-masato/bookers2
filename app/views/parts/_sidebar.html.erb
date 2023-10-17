@@ -2,7 +2,7 @@
   <h2>User info</h2>
 
   <div class="user-profile">
-    <%= image_tag user.get_profile_image(128, 128) %>
+    <%= image_tag user.get_profile_image(128, 128), width: 128, height: 128 %>
     <div class="font-weight-bold h5"><%= user.name %></div>
     <p><%= user.introduction %></p>
   </div>
