@@ -1,4 +1,14 @@
 module ApplicationHelper
+  ##
+  # Returns a set of navigation items based on the user's sign-in status.
+  #
+  # @param signed_in [Boolean] A flag indicating whether the user is signed in.
+  # @return [Array<Hash>] An array of navigation items.
+  #   @option (Hash) :path [String] The URL destination for the link.
+  #   @option (Hash) :fa_class [String] The FontAwesome icon class.
+  #   @option (Hash) :text [String] The display text for the link.
+  #   @option (Hash) :method (optional) [Symbol] The HTTP method (e.g., :delete).
+  #
   def get_nav_items(signed_in)
     signed_in ? [
       {
