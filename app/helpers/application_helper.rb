@@ -13,7 +13,9 @@ module ApplicationHelper
     signed_in ? [
       {
         path: user_path(current_user),
-        fa_class: "fa-solid fa-house",
+        # テストに失敗するため、古いバージョンのアイコンクラスを使用
+        # fa_class: "fa-solid fa-house",
+        fa_class: "fa-solid fa-home",
         text: "Home"
       },
       {
@@ -28,14 +30,18 @@ module ApplicationHelper
       },
       {
         path: destroy_user_session_path,
-        fa_class: "fa-solid fa-right-from-bracket",
+        # テストに失敗するため、古いバージョンのアイコンクラスを使用
+        # fa_class: "fa-solid fa-right-from-bracket",
+        fa_class: "fa-solid fa-sign-out-alt",
         text: "Log out",
         method: :delete,
       }
     ] : [
       {
         path: "/",
-        fa_class: "fa-solid fa-house",
+        # テストに失敗するため、古いバージョンのアイコンクラスを使用
+        # fa_class: "fa-solid fa-house",
+        fa_class: "fa-solid fa-home",
         text: "Home"
       },
       {
@@ -46,11 +52,13 @@ module ApplicationHelper
       {
         path: new_user_registration_path,
         fa_class: "fa-solid fa-user-plus",
-        text: "Sign in"
+        text: "Sign up"
       },
       {
         path: new_user_session_path,
-        fa_class: "fa-solid fa-right-to-bracket",
+        # テストに失敗するため、古いバージョンのアイコンクラスを使用
+        # fa_class: "fa-solid fa-right-to-bracket",
+        fa_class: "fa-solid fa-sign-in-alt",
         text: "Log in"
       }
     ]

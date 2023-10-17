@@ -1,2 +1,6 @@
 <%= render "layouts/error_messages", model: @book %>
-<%= render "books/book_form", book: @book, heading: "Editing Book", action: :update %>
+<%= render "books/book_form", book: @book, heading: "Editing Book", action: :update do %>
+  <div>
+    <%= link_to "Show", book_path(@book.id) %> | <%= link_to "Back", books_path %>
+  </div>
+<% end %>
