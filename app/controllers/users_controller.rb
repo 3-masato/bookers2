@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   before_action :is_matching_login_user, only: [:edit, :update]
+  rescue_from ActiveRecord::RecordNotFound do |e|
+    redirect_to users_path
+  end
 
   def show
     @user = User.find(params[:id])

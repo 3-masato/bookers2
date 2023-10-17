@@ -15,22 +15,5 @@
 </section>
 
 <section class="mb-4">
-  <h2>New book</h2>
-  <div class="form-body">
-    <%= form_with model: Book.new do |f| %>
-      <div class="form-group">
-        <label>Title:</label>
-        <%= f.text_field :title, class: "form-control", placeholder: "book title" %>
-      </div>
-
-      <div class="form-group">
-        <label>Opinion:</label>
-        <%= f.text_area :body, class: "form-control", rows: "3", placeholder: "book opinion" %>
-      </div>
-
-      <div class="form-group">
-        <%= f.submit "Create Book", class: "btn btn-block btn-success" %>
-      </div>
-    <% end %>
-  </div>
+  <%= render "parts/book_form", book: Book.new, heading: "New book", action: :create %>
 </section>

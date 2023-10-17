@@ -12,14 +12,7 @@
   </head>
 
   <body>
-    <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="/">Bookers</a>
-          <%= render "parts/header_nav_link" %>
-        </div>
-      </nav>
-    </header>
+    <%= render "layouts/header" %>
     <main class="container">
       <%= yield %>
     </main>

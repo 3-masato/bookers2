@@ -2,22 +2,20 @@
 <div class="form-body">
   <%= form_with model: @user do |f| %>
     <div class="form-group">
-      <label>Name</label>
+      <label class="font-weight-bold">Name</label>
       <%= f.text_field :name, class: "form-control", autofocus: true, placeholder: "Enter your name" %>
     </div>
 
     <div class="form-group">
-      <label>Image</label>
+      <label class="font-weight-bold">Image</label>
       <%= f.file_field :profile_image, class: "form-control-file", accept: "image/*" %>
     </div>
 
     <div class="form-group">
-      <label>Introduction</label>
+      <label class="font-weight-bold">Introduction</label>
       <%= f.text_area :introduction, class: "form-control", rows: "3", placeholder: "Enter your self-introduction" %>
     </div>
 
-    <div class="form-group">
-      <%= f.submit "Update User" %>
-    </div>
+    <%= render "parts/form_cancel_and_save", f: f %>
   <% end %>
 </div>
