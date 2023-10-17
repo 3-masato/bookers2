@@ -1,13 +1,15 @@
-<h2>Users</h2>
-<table class="table table-hover table-inverse">
-  <thead>
-    <tr>
-      <td data-col="avatar">Image</td>
-      <td data-col="name">Title</td>
-      <td data-col="show"></td>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render partial: "users/user_list_item", collection: users, as: :user %>
-  </tbody>
-</table>
+<section class="mb-4">
+  <h2>Users</h2>
+  <table class="table table-hover table-inverse">
+    <thead>
+      <tr>
+        <td data-col="avatar">Image</td>
+        <td data-col="name">Title</td>
+        <td data-col="show"></td>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "users/user_list_item", collection: users, as: :user %>
+    </tbody>
+  </table>
+</section>

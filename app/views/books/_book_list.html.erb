@@ -1,17 +1,19 @@
-<h2>Books</h2>
-<% if books.all.count == 0 %>
-  <p class="text-center">There are no books posted. Share your thoughts on the books you have read!</p>
-<% else %>
-  <table class="table table-hover table-inverse">
-    <thead>
-      <tr>
-        <td data-col="avatar"></td>
-        <td data-col="title">Title</td>
-        <td data-col="opinion">Opinion</td>
-      </tr>
-    </thead>
-    <tbody>
-      <%= render partial: "books/book_list_item", collection: books, as: :book %>
-    </tbody>
-  </table>
-<% end %>
+<section class="mb-4">
+  <h2>Books</h2>
+  <% if books.all.count == 0 %>
+    <p class="text-center">There are no books posted. Share your thoughts on the books you have read!</p>
+  <% else %>
+    <table class="table table-hover table-inverse">
+      <thead>
+        <tr>
+          <td data-col="avatar"></td>
+          <td data-col="title">Title</td>
+          <td data-col="opinion">Opinion</td>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "books/book_list_item", collection: books, as: :book %>
+      </tbody>
+    </table>
+  <% end %>
+</section>

@@ -2,18 +2,18 @@
   <h2>User info</h2>
 
   <div class="user-profile">
-    <%= image_tag user.get_profile_image(128, 128), width: 128, height: 128 %>
-    <div class="font-weight-bold h5"><%= user.name %></div>
+    <div class="text-center"><%= image_tag user.get_profile_image(128, 128), width: 128, height: 128 %></div>
+    <div class="font-weight-bold h5 my-2"><%= user.name %></div>
     <p><%= user.introduction %></p>
   </div>
 
-  <div class="row text-center">
-    <% if user == current_user %>
-      <%= link_to "Edit", edit_user_path(user), class: "col-6 mx-auto btn btn-outline-secondary btn-block" %>
-    <% end %>
-  </div>
+  <% if user == current_user %>
+    <div class="text-center">
+      <%= link_to edit_user_path(user), class: "mx-auto btn btn-sm btn-outline-secondary px-3" do %>
+        <i class="fa-solid fa-user-gear"></i> Edit
+      <% end %>
+    </div>
+  <% end %>
 </section>
 
-<section class="mb-4">
-  <%= render "books/book_form", book: Book.new, heading: "New book", action: :create %>
-</section>
+<%= render "books/book_form", book: Book.new, heading: "New book", action: :create %>
