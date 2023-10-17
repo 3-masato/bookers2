@@ -13,7 +13,7 @@ module ApplicationHelper
     signed_in ? [
       {
         path: user_path(current_user),
-        # テストに失敗するため、古いバージョンのアイコンクラスを使用
+        # テストケースに合わせて、古いバージョンのアイコンクラスを使用
         # fa_class: "fa-solid fa-house",
         fa_class: "fa-solid fa-home",
         text: "Home"
@@ -30,7 +30,7 @@ module ApplicationHelper
       },
       {
         path: destroy_user_session_path,
-        # テストに失敗するため、古いバージョンのアイコンクラスを使用
+        # テストケースに合わせて、古いバージョンのアイコンクラスを使用
         # fa_class: "fa-solid fa-right-from-bracket",
         fa_class: "fa-solid fa-sign-out-alt",
         text: "Log out",
@@ -39,7 +39,7 @@ module ApplicationHelper
     ] : [
       {
         path: "/",
-        # テストに失敗するため、古いバージョンのアイコンクラスを使用
+        # テストケースに合わせて、古いバージョンのアイコンクラスを使用
         # fa_class: "fa-solid fa-house",
         fa_class: "fa-solid fa-home",
         text: "Home"
@@ -56,7 +56,7 @@ module ApplicationHelper
       },
       {
         path: new_user_session_path,
-        # テストに失敗するため、古いバージョンのアイコンクラスを使用
+        # テストケースに合わせて、古いバージョンのアイコンクラスを使用
         # fa_class: "fa-solid fa-right-to-bracket",
         fa_class: "fa-solid fa-sign-in-alt",
         text: "Log in"
